@@ -1,29 +1,61 @@
-<h2>Sign up</h2>
+<%= stylesheet_link_tag 'resistration' %>
+<div class="container">
+  <div class="big-wrapper">
+    <h3>サインアップ</h2>
+      <div class="wrapper">
+        <div class="form">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <dl>
+            <dt>名前</dt>
+            <dd><%= f.text_field :name %></dd>
+            <%= image_tag "dot.png", class: "dot"%>
+            <dt>メールアドレス</dt>
+            <dd class="long"><%= f.email_field :email %></dd>
+            <%= image_tag "dot.png", class: "dot" %>
+            <dt class="long">パスワード</dt>
+            <dd ><%= f.password_field :password, autocomplete: "new-password" %></dd>
+            <%= image_tag "dot.png", class: "dot" %>
+            <dt class="long">パスワード再確認</dt>
+            <dd><%= f.password_field :password_confirmation, autocomplete: "new-password" %></dt>
+          </dl>
+            <div class="actions">
+            <%= f.submit "サインアップ" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <!--<%#= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>-->
+  <!--  <%#= render "devise/shared/error_messages", resource: resource %>-->
+  <!--  <div class="field">-->
+  <!--    <br />-->
+  <!--    <%#= f.text_field :name, autocomplte: "name" %>-->
+  <!--  </div>-->
+  
+  <!--  <div class="field">-->
+  <!--    <%#= f.label :email %><br />-->
+  <!--    <%#= f.email_field :email, autofocus: true, autocomplete: "email" %>-->
+  <!--  </div>-->
+  
+  <!--  <div class="field">-->
+  <!--    <%#= f.label :password %>-->
+  <!--    <%# if @minimum_password_length %>-->
+  <!--    <em>(<%#= @minimum_password_length %> characters minimum)</em>-->
+  <!--    <%# end %><br />-->
+  <!--    <%#= f.password_field :password, autocomplete: "new-password" %>-->
+  <!--  </div>-->
+  
+  <!--  <div class="field">-->
+  <!--    <%#= f.label :password_confirmation %><br />-->
+  <!--    <%#= f.password_field :password_confirmation, autocomplete: "new-password" %>-->
+  <!--  </div>-->
+  
+  <!--  <div class="actions">-->
+  <!--    <%#= f.submit "Sign up" %>-->
+  <!--  </div>-->
+  <!--<%# #end %>-->
+  
+  <!--<%#= render "devise/shared/links" %>-->
