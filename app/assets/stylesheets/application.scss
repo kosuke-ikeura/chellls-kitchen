@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+@import "bootstrap";
+
+html, body {
+    height: 100%;
+}
+
+body {
+   background-color: #fcefb5;
+   font-family: 'Avenir', 'Corbel', 'Yu Gothic', '游ゴシック', YuGothic, '遊ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
+}
+header {
+   height: 100px;
+   background-color: #cc2931;
+}
+
+nav {
+   height: 100px;
+   line-height: 100px;
+   margin: 0 20px;
+}
+
+.header-logo {
+   vertical-align: middle;
+}
+.header-list {
+   display: flex;
+   list-style: none;
+   float: right;
+}
+footer {
+    height: 100px;
+    background-color: #cc2931;
+    margin: 0px !important;
+}
+.footer-list {
+    display: flex;
+    list-style: none;
+    float: right;
+}
+#sign-up {
+   margin-right: 30px;
+}
+
+
+.row {
+   margin: 40px auto;
+}
+.col-md-6 {
+   margin-bottom: 40px;
+   padding-right: 20px;
+   padding-left: 20px;
+}
+
+.box {
+   background-color: #ffffff;
+   height: 100px;
+}
+
+.flavor {
+   font-family: 'Avenir', 'Corbel', 'Yu Gothic', '游ゴシック', YuGothic, '遊ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
+   font-size: 25px;
+   font-weight: bold;
+   display: inline-block;
+   line-height: 100px;
+   margin-left: 50px;
+   position: relative;
+}
+.StatusImage {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 14px;
+    right: 70px;
+}
+
+.StatusImage img {
+    width: 70px;
+    height: 70px;
+}
