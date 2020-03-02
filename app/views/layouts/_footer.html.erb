@@ -7,9 +7,7 @@
          <ul class="footer-list">
             <% if user_signed_in? %>
                <li>
-                  <%= link_to, destroy_user_session_path do %>
-                     <%= image_tag "logout.png" %>
-                  <% end %>
+                  <%= link_to image_tag("logout.png"), destroy_user_session_path %>
                </li>
             <% else %>
                <li id="sign-up">

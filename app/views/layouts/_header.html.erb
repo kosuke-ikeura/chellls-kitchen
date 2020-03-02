@@ -6,20 +6,14 @@
          <% end %>
          <ul class="header-list">
             <% if user_signed_in? %>
-               <li>
-                  <%= link_to, new_flavor_path do %>
-                     <%= image_tag "kounyuu.png"%>
-                  <% end %>
+               <li id="kounyuu">
+                  <%= link_to image_tag("kounyuu.png"), new_flavor_path %>
                </li>
-               <li>
-                  <%= link_to, user_path(current_user) do %>
-                     <%= image_tag "mypage.png" %>
-                  <% end %>
+               <li id="mypage">
+                  <%= link_to image_tag("mypage.png"), user_path(current_user) %>
                </li>
-               <li>
-                  <%= link_to, destroy_user_session_path do %>
-                     <%= image_tag "logout.png" %>
-                  <% end %>
+               <li id="logout">
+                  <%= link_to image_tag("logout.png"), destroy_user_session_path %>
                </li>
             <% else %>
                <li id="sign-up">

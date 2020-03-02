@@ -1,0 +1,28 @@
+.modal_dialog {
+    margin-top: 100px;
+}
+
+.modal_content {
+    margin: 0 auto;
+    background-color: #e4daab;
+    position: relative;
+    width: 940px;
+    border-radius: 5px;
+    height: 380px;
+}
+.modal_title{
+    font-size: 25px;
+    font-weight: 900;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    color: #cc2931;
+}
+
+.StatusLink {
+    display: inline-block;
+}
+.StatusLink img {
+    width: 70px;
+    height: 70px;
+}
