@@ -13,15 +13,15 @@
             <dt>メールアドレス</dt>
             <dd class="long"><%= f.email_field :email %></dd>
             <%= image_tag "dot.png", class: "dot" %>
-            <dt class="long">パスワード</dt>
-            <dd ><%= f.password_field :password, autocomplete: "new-password" %></dd>
+            <dt>パスワード</dt>
+            <dd class="long"><%= f.password_field :password, autocomplete: "new-password"  %></dd>
             <%= image_tag "dot.png", class: "dot" %>
-            <dt class="long">パスワード再確認</dt>
-            <dd><%= f.password_field :password_confirmation, autocomplete: "new-password" %></dt>
-          </dl>
-            <div class="actions">
+            <dt>パスワード再確認</dt>
+            <dd class="long"><%= f.password_field :password_confirmation, autocomplete: "new-password" %></dt>
+            <dd class="actions">
             <%= f.submit "サインアップ" %>
-            </div>
+            </dd>
+            </dl>
           <% end %>
         </div>
       </div>
